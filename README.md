@@ -1,25 +1,24 @@
-# Multi-Step Registration Form with AI Helper
+# Multi-Step Form with AI Helper
 
-A modern, accessible multi-step registration form built with React, TypeScript, and Tailwind CSS. Features include step-by-step validation, progress tracking, and an AI helper sidebar that provides contextual assistance for each form field.
+A guided multi-step form that uses an AI assistant to help users fill it out.
 
-## Features
+## Overview
 
-- **3-Step Registration Form**: Personal Information → Account Details → Preferences
-- **Real-time Validation**: Field-level validation with error messages
-- **Progress Indicator**: Visual progress bar and step indicators
-- **AI Helper Sidebar**: Contextual help for each form field with mock AI responses
-- **Review Step**: Final review page before submission
-- **Responsive Design**: Mobile-friendly layout
-- **Accessible**: Proper labels, ARIA attributes, and keyboard navigation
+This project combines a traditional multi-step form UX with an integrated AI helper that can answer questions, suggest answers, and guide users through complex form flows. Built as a reusable pattern for onboarding, intake, or configuration workflows where users might need contextual help.
 
 ## Tech Stack
 
-- React 18
 - TypeScript
-- Tailwind CSS
 - Vite
+- Tailwind CSS
+- PostCSS
 
 ## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm
 
 ### Installation
 
@@ -39,64 +38,20 @@ npm run dev
 npm run build
 ```
 
-### Preview
-
-```bash
-npm run preview
-```
-
 ## Project Structure
 
 ```
-src/
-├── components/
-│   ├── MultiStepForm/
-│   │   ├── MultiStepForm.tsx
-│   │   ├── ProgressIndicator.tsx
-│   │   ├── FormNavigation.tsx
-│   │   └── steps/
-│   │       ├── Step1PersonalInfo.tsx
-│   │       ├── Step2AccountDetails.tsx
-│   │       ├── Step3Preferences.tsx
-│   │       └── ReviewStep.tsx
-│   └── AIHelper/
-│       ├── AIHelper.tsx
-│       └── types.ts
-├── hooks/
-│   ├── useFormState.ts
-│   └── useFormValidation.ts
-├── utils/
-│   ├── validation.ts
-│   └── mockAI.ts
-├── types/
-│   └── form.types.ts
-└── App.tsx
+src/         # Form steps, AI helper component, and state management
 ```
 
-## Form Steps
+## Configuration
 
-1. **Personal Information**: First name, last name, email, phone number
-2. **Account Details**: Username, password, confirm password
-3. **Preferences**: Newsletter subscription, terms & conditions acceptance
-4. **Review**: Summary of all entered information
+The AI helper requires an API key. Add your credentials to a `.env` file:
 
-## AI Helper
+```env
+VITE_AI_API_KEY=your_key_here
+```
 
-The AI Helper sidebar provides contextual assistance for each form field:
-- Explains the purpose of each field
-- Provides example inputs
-- Offers helpful tips and requirements
-- Uses mock AI responses (can be replaced with real API integration)
+---
 
-## Validation Rules
-
-- **Email**: Valid email format required
-- **Phone**: Valid phone number format (various formats accepted)
-- **Username**: Minimum 3 characters, alphanumeric and underscores only
-- **Password**: Minimum 8 characters, must include uppercase, lowercase, and number
-- **Terms**: Must be accepted to proceed
-
-## License
-
-MIT
-
+*Built by [nmswainston](https://github.com/nmswainston)*
