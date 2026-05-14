@@ -1,56 +1,60 @@
 # Multi-Step Form with AI Helper
 
-A guided multi-step form that uses an AI assistant to help users fill it out.
+A guided multi-step form with an embedded AI assistant that helps users complete it.
 
-## Overview
+## Problem
 
-This project combines a traditional multi-step form UX with an integrated AI helper that can answer questions, suggest answers, and guide users through complex form flows. Built as a reusable pattern for onboarding, intake, or configuration workflows where users might need contextual help.
+Complex forms — onboarding flows, intake questionnaires, applications — have high abandonment rates because users get stuck or confused partway through and have no one to ask for help.
+
+## Solution
+
+An AI assistant embedded directly in the form that can answer questions, clarify field requirements, and guide users through tricky steps in real time — reducing abandonment and improving data quality.
+
+## Screenshots
+
+> *Add 2–4 screenshots here*
 
 ## Tech Stack
 
 - TypeScript
 - Vite
 - Tailwind CSS
-- PostCSS
 
-## Getting Started
+## Features
 
-### Prerequisites
+- Multi-step form with progress tracking
+- Inline AI assistant for contextual help at each step
+- Form state persists across steps
+- Fully responsive mobile layout
+- Clean validation with helpful error messages
 
-- Node.js 18+
-- npm
-
-### Installation
+## Installation
 
 ```bash
 npm install
 ```
 
-### Development
+Add your AI API key to a `.env` file:
+
+```bash
+VITE_AI_API_KEY=your_key_here
+```
 
 ```bash
 npm run dev
 ```
 
-### Build
+## Lessons Learned
 
-```bash
-npm run build
-```
+- AI assistance works best when it's contextual — scoped to the current form step rather than open-ended
+- Users are more comfortable with AI help when it feels like a guide, not a chatbot
+- Managing multi-step form state cleanly in React requires thoughtful architecture upfront
 
-## Project Structure
+## Future Improvements
 
-```
-src/         # Form steps, AI helper component, and state management
-```
-
-## Configuration
-
-The AI helper requires an API key. Add your credentials to a `.env` file:
-
-```env
-VITE_AI_API_KEY=your_key_here
-```
+- Form analytics to identify which steps have the highest drop-off
+- Customizable AI prompt per step
+- Admin view to configure form structure without code
 
 ---
 
